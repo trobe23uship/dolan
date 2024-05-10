@@ -1,0 +1,1 @@
+export type AxeThrow = [{x: number, y: number}, boolean]; 
