@@ -1,6 +1,6 @@
 import { Chart, registerables } from 'chart.js';
 import { getThrowsFromDatabase } from './database';
-import { getScores } from './getScores';
+import { getScoresByThrows } from './getScoresByThrows';
 Chart.register(...registerables);
 
 const createChart = (scores: number[]) => {
@@ -21,7 +21,7 @@ const createChart = (scores: number[]) => {
 
 const start = async () => {
     const throws = await getThrowsFromDatabase();
-    const scores = getScores(throws);
+    const scores = getScoresByThrows(throws);
 
    createChart(scores);
 }

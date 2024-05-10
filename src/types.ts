@@ -1,1 +1,3 @@
-export type AxeThrow = [{x: number, y: number}, boolean]; 
+type Coordinates = {x: number, y: number};
+
+export type AxeThrow = [Coordinates, boolean]; 
